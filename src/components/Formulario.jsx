@@ -5,8 +5,7 @@ const UserForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: '',
-    lastName: ''  // El estado sigue con "lastName"
+    password: ''
   });
 
   // Manejador de cambios para actualizar el estado del formulario
@@ -26,8 +25,7 @@ const UserForm = () => {
     const userData = {
       name: formData.name,
       email: formData.email,
-      password: formData.password,
-      last_name: formData.lastName  // Cambiar "lastName" a "last_name" aquí
+      password: formData.password
     };
 
     try {
@@ -36,7 +34,7 @@ const UserForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(userData), // Enviar datos con last_name
+        body: JSON.stringify(userData), // Enviar datos sin last_name
       });
 
       // Si la respuesta es exitosa
@@ -93,7 +91,6 @@ const UserForm = () => {
             required
           />
         </div>
-
 
         <button type="submit" className="submit-btn">Enviar</button>
       </form>
