@@ -26,7 +26,8 @@ const Login = () => {
 
       if (response.ok) {
         console.log('Usuario autenticado:', data);
-        window.location.href = '/home'; // Redirigir a home si es exitoso
+        // Redirigir usando navigate en lugar de window.location.href
+        navigate('/home'); 
       } else {
         setError(data.message || 'Credenciales incorrectas');
       }
