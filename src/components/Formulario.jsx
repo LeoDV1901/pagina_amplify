@@ -29,7 +29,7 @@ const UserForm = () => {
     };
 
     try {
-      const response = await fetch('http://18.222.228.154/users/', {
+      const response = await fetch('https://18.222.228.154/users/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
