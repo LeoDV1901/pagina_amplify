@@ -9,7 +9,7 @@ const Users = () => {
   const [searchTerm, setSearchTerm] = useState('');
   
   useEffect(() => {
-    axios.get('http://127.0.0.1:5000/users/')
+    axios.get('http://18.222.228.154/users/')
       .then((response) => {
         setUsers(response.data);
         setLoading(false);
